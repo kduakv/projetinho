@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTF CO</title>
+   
+</head>
+<body>
+    
+    
+    <main>
+        <section id="hero">
+            <div class="container">
+                <img src="TFF.jpg" class="TTF"/>
+                <h2>Bem-vindo ao TFF co</h2>
+                <p>Desde 2024 oferecendo roupas autenticas e exclusivas</p>
+              
+            </div>
+        </section>
+        
+        <section id="services">
+            <div class="container">
+                <h2>Nossos Produtos</h2>
+                <div class="service">
+                    <img src="bape.png" alt="Serviço 1">
+                    <h3></h3>
+                    <p></p>
+                    
+                    
+                        <p>A Bathing Ape, também conhecida como BAPE, é uma marca japonesa de moda urbana fundada em 1993 por Tomoaki Nagao, conhecido por seu nome artístico Nigo. A marca é conhecida por suas roupas de camuflagem, logotipos de macacos e colaborações com outras marcas de moda.</p>
+                        
+                    
+                    <a href="comprasbape.html" class=" btn buy" onclick="comprar()">Comprar</a>
+                
+
+                </div>
+                <div class="service">
+                    <img src="sup.png" alt="Serviço 2">
+                    <h3></h3>
+                    <p></p>
+                    
+                    <a href="comprassup.HTML" class=" btn buy" onclick="comprar()">Comprar</a>
+                    
+                        <p>Supreme é uma marca de streetwear de luxo fundada em Nova York em 1994 por James
+                            Jebbia. A marca é conhecida por seu design inovador e limitado, bem como por sua cultura de hype.</p>
+                        
+                
+                </div>
+                <div class="service">
+                    <img src="trap.png" alt="Serviço 3">
+                    <h3></h3>
+                    <p></p>
+                    <a href="comprasbape.html" class=" btn buy">Comprar</a>
+
+                        <p>Trapstar é uma marca de streetwear britânica fundada em 2005 por três amigos de infância, Mikey, Lee e Will. A marca é conhecida por seu estilo influenciado pelo hip hop e pela cultura da rua, e por seus produtos de alta qualidade, como roupas esportivas, jaquetas, camisetas e acessórios.</p>
+                    
+                </div>
+            </div>
+        </section>
+        
+        <section id="about">
+            <div class="container">
+                
+                <h2>CONTATO</h2>
+                <a href="https://www.instagram.com/eudann.777?igsh=dmt2MHQ3MndyNHNy">
+                <img src="instagram.jpg" class="instagram"> 
+                </a>
+                <a href="https://www.instagram.com/kdu.akv?igsh=dmt2MHQ3MndyNHNy">
+                   <img src="instagram.jpg" class="instagram">
+                </a>
+             
+                
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TTF COMPANY Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Botão "Saiba Mais" no banner de herói
+            const saibaMaisBtn = document.querySelector('#hero .btn');
+            const hiddenContentHero = document.querySelector('#hero .hidden-content');
+            const closeBtnHero = document.querySelector('#hero .close-btn');
+
+            saibaMaisBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                hiddenContentHero.style.display = 'block';
+            });
+
+            closeBtnHero.addEventListener('click', function(e) {
+                e.preventDefault();
+                hiddenContentHero.style.display = 'none';
+            });
+            // Botões "Leia Mais" nos serviços
+            const readMoreBtns = document.querySelectorAll('.read-more');
+
+            readMoreBtns.forEach(function(btn) {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const service = btn.closest('.service') || btn.closest('#about');
+                    const serviceHiddenContent = service.querySelector('.hidden-content');
+                    serviceHiddenContent.style.display = 'block';
+                });
+            });
+
+            // Botões "Fechar" nos conteúdos ocultos
+            const closeBtns = document.querySelectorAll('.close-btn');
+
+            closeBtns.forEach(function(btn) {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const hiddenContent = btn.closest('.hidden-content');
+                    hiddenContent.style.display = 'none';
+                });
+            });
+        });
+    
+    </script>
+</body>
+</html>
